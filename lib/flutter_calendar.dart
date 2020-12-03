@@ -37,7 +37,7 @@ class _CalendarState extends State<Calendar> {
   Iterable<DateTime> selectedWeeksDays;
   DateTime _selectedDate = new DateTime.now();
   String currentMonth;
-  bool isExpanded = false;
+  bool isExpanded = true;
   String displayMonth;
   DateTime get selectedDate => _selectedDate;
 
