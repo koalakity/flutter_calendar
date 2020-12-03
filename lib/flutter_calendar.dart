@@ -20,7 +20,7 @@ class Calendar extends StatefulWidget {
   Calendar(
       {this.onDateSelected,
       this.onSelectedRangeChange,
-      this.isExpandable: false,
+      this.isExpandable: true,
       this.dayBuilder,
       this.showTodayAction: true,
       this.showChevronsToChangeRange: true,
@@ -203,24 +203,7 @@ class _CalendarState extends State<Calendar> {
   }
 
   Widget get expansionButtonRow {
-    if (widget.isExpandable) {
-      return new Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          new Text(Utils.fullDayFormat(selectedDate)),
-          new IconButton(
-            iconSize: 20.0,
-            padding: new EdgeInsets.all(0.0),
-            onPressed: toggleExpanded,
-            icon: isExpanded
-                ? new Icon(Icons.arrow_drop_up)
-                : new Icon(Icons.arrow_drop_down),
-          ),
-        ],
-      );
-    } else {
-      return new Container();
-    }
+    return new Container();
   }
 
   @override
